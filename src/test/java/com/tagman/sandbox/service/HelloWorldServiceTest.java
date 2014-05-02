@@ -65,4 +65,10 @@ public class HelloWorldServiceTest {
         Assert.assertEquals(greeting, "Hello World !");
     }
 
+    @Test(expected=IndexOutOfBoundsException.class)
+    public void testIndexOutOfBoundsException() {
+        ArrayList emptyList = new ArrayList();
+        Object o = emptyList.get(0);
+    }
+
 }
